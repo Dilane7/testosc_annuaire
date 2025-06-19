@@ -1,0 +1,186 @@
+:root {
+    --orange-color: #FF7900;
+    --dark-grey: #333;
+    --light-grey: #f4f4f4;
+    --border-color: #ddd;
+    --danger-color: #ee1911;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--light-grey);
+    color: var(--dark-grey);
+    margin: 0;
+    padding-top: 80px; 
+    line-height: 1.6;
+}
+
+header {
+    background-color: #111; 
+    color: var(--orange-color);
+    padding: 15px 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; 
+    box-sizing: border-box;
+   
+}
+
+.header-content {
+    display: flex;
+    align-items: center; 
+    max-width: 800px; 
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.logo {
+    height: 40px; 
+    margin-right: 20px;
+}
+
+header h1 {
+    margin: 0; 
+    font-size: 1.5em;
+    font-weight: normal;
+}
+
+
+main {
+    max-width: 800px;
+    margin: 0 auto 20px auto; 
+    background: #fff;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+main h1{
+    text-align: center;
+    color: var(--orange-color);
+}
+
+h2 {
+    border-bottom: 2px solid var(--orange-color);
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+
+/* --- Formulaire --- */
+.form-container {
+    margin-bottom: 40px;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.form-group input:focus {
+    outline: none;
+    border-color: var(--orange-color);
+    box-shadow: 0 0 5px rgba(255, 121, 0, 0.5);
+}
+button {
+    cursor: pointer;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+}
+.btn-add {
+    background-color: var(--orange-color);
+    color: white;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+.btn-add:hover {
+    background-color: white;
+    border: 1px solid var(--orange-color);
+    color: var(--orange-color);
+}
+
+/* --- Liste des employés --- */
+#employee-list {
+    list-style: none;
+    padding: 0;
+}
+#employee-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid var(--border-color);
+    flex-wrap: wrap;
+}
+#employee-list li:last-child {
+    border-bottom: none;
+}
+.employee-info {
+    flex-grow: 1;
+}
+.employee-info span {
+    display: block;
+}
+.employee-info .name {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+.employee-info .email, .employee-info .poste {
+    color: #666;
+    font-size: 0.9em;
+}
+.btn-delete {
+    background-color: var(--danger-color);
+    color: white;
+    margin-left: 20px;
+    transition: background-color 0.3s ease;
+}
+.btn-delete:hover {
+    background-color: white;
+    border: 1px solid var(--danger-color);
+    color: var(--danger-color);
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 600px) {
+    body {
+        padding-top: 70px; 
+    }
+    header h1 {
+        font-size: 1.2em; 
+    }
+    main h1 {
+        font-size: 1.2em; 
+    }
+    .logo {
+        height: 30px;
+        margin-right: 15px;
+    }
+    main {
+        padding: 15px;
+    }
+    #employee-list li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .btn-delete {
+        margin-left: 0;
+        margin-top: 10px;
+        width: 100%;
+    }
+}
