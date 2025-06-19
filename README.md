@@ -1,7 +1,7 @@
 # testosc_annuaire
 Nom et Prénom : TIWA TSAGUE Dilane
 Langage utilisé : HTML, CSS et JS
-Temps réellement passé :
+Temps réellement passé : 3h30
 Instructions pour ouvrir le projet : double-cliquer sur index.html
 Description et listes des fonctionnalités développées : 
 Mini application  web en front-end uniquement permettant de gérer un annuaire interne simplifié des employés d’un service Orange
